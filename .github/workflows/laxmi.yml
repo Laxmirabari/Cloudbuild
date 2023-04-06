@@ -1,8 +1,14 @@
-name: Laxmi
-'on': push
+on:
+  issues:
+    types:
+      - opened
+
 jobs:
-  my-job:
+  label_issue:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: echo "How to trigger build remotely in github action"
+      - env:
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.https://github.com/Laxmirabari/Cloudbuild/issues/1#issue-1657799930 }}
+        run: |
+          gh issue edit $ISSUE_URL --add-label "triage"
