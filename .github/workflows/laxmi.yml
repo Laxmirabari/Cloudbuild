@@ -1,0 +1,8 @@
+name: Laxmi
+'on': push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "How to trigger build remotely in github action"
