@@ -1,4 +1,16 @@
-'on':
+name: Issue label
+
+on:
+
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+
+
   issues:
     types:
       - opened
