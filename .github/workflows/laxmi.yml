@@ -13,4 +13,4 @@ jobs:
         run: |
           gh issue edit $ISSUE_URL --add-label "triage"
           
-          Done from story page
+          Done from story page data
